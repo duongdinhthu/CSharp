@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hi\\newproject\\newproject.csproj": {}
+    "D:\\CSharp\\newproject\\newproject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hi\\newproject\\newproject.csproj": {
+    "D:\\CSharp\\newproject\\newproject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hi\\newproject\\newproject.csproj",
+        "projectUniqueName": "D:\\CSharp\\newproject\\newproject.csproj",
         "projectName": "newproject",
-        "projectPath": "C:\\Users\\Hi\\newproject\\newproject.csproj",
+        "projectPath": "D:\\CSharp\\newproject\\newproject.csproj",
         "packagesPath": "C:\\Users\\Hi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hi\\newproject\\obj\\",
+        "outputPath": "D:\\CSharp\\newproject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hi\\AppData\\Roaming\\NuGet\\NuGet.Config"

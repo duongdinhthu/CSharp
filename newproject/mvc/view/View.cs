@@ -39,21 +39,18 @@ namespace newproject.view
             }
             public void AddProduct()
             {
-                Console.WriteLine("Enter the product Id:");
-                int id = Convert.ToInt16(Console.ReadLine());
                 Console.WriteLine("Enter product name: ");
                 string Product_name = Console.ReadLine();
                 Console.WriteLine("Enter product price: ");
                 decimal Price = Convert.ToDecimal(Console.ReadLine());
                 Console.WriteLine("Enter description: ");
                 string Description = Console.ReadLine();
-                Product product = new Product(id,Product_name,Description,Price);
+                Product product = new Product(Product_name,Description,Price);
 
                 productController.Insert(product);
             }
             public void AddCustomer(){
-                Console.WriteLine("Enter Customert Id:");
-                int id = Convert.ToInt16(Console.ReadLine());
+                
                 Console.WriteLine("Enter Customer first_name: ");
                 string Fname = Console.ReadLine();
                 Console.WriteLine("Enter customer last name: ");
@@ -62,7 +59,7 @@ namespace newproject.view
                 string Email = Console.ReadLine();
                 Console.WriteLine("Enter phone: ");
                 int Phone = Convert.ToInt32(Console.ReadLine());
-                Customer customer = new Customer(id,Fname,Lname,Email,Phone);
+                Customer customer = new Customer(Fname,Lname,Email,Phone);
 
                 customerController.Insert(customer);
             }

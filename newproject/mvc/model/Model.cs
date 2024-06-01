@@ -42,10 +42,7 @@ namespace newproject.model
             query.Append(string.Join(", ", columns));
             query.Append(") VALUES (");
             query.Append(string.Join(", ", parameters));
-            query.Append(")");
-            
-            Console.WriteLine(query.ToString());
-            
+            query.Append(")");            
             return query.ToString();
         }
 
@@ -69,6 +66,7 @@ namespace newproject.model
                         if (value != null)
                         {
                             cmd.Parameters.AddWithValue("@" + propertyInfo.Name, value);
+
                         }
                     }
 
