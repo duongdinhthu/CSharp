@@ -1,10 +1,10 @@
 using System;
 using MySql.Data.MySqlClient;
 using System.Reflection;
-using newproject.entity;
+using newproject.mvc.entity;
 using System.Text;
-using newproject.connection;
-namespace newproject.model
+using newproject.mvc.connection;
+namespace newproject.mvc.model
 {
     class Model<T> : ModelDAO<T> where T : Entity<T>
     {
@@ -97,7 +97,7 @@ namespace newproject.model
 
         public bool Update(T entity)
         {
-            // Implement logic for updating entity
+
             return true; // Placeholder return value
         }
 

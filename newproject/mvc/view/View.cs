@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using newproject.model;
-using newproject.controller;
-using newproject.entity;
-namespace newproject.view
+using newproject.mvc.entity;
+using newproject.mvc.model;
+using newproject.mvc.controller;
+namespace newproject.mvc.view
 {
     public class View
     {
@@ -27,9 +27,31 @@ namespace newproject.view
                 string choice = Console.ReadLine();
 
                 switch(choice){
-                    case "1": AddProduct();
+                    case "1": MenuProduct();
                         break;
                     case "2":AddCustomer();
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice, pls try again");
+                        break;
+                }
+            }
+            }
+            public void MenuProduct(){
+                while(true){
+                Console.WriteLine("Product Management");
+                Console.WriteLine("1. Add product");
+                Console.WriteLine("2. Update product");
+                Console.WriteLine("3. Get All product");
+                Console.WriteLine("4. Delete product");
+                Console.WriteLine("5. Get Product By Id");
+                Console.WriteLine("Choose an option: ");
+                string choice = Console.ReadLine();
+
+                switch(choice){
+                    case "1": AddProduct();
+                        break;
+                    case "2":UpdateProduct();
                         break;
                     default:
                         Console.WriteLine("Invalid choice, pls try again");
@@ -40,14 +62,27 @@ namespace newproject.view
             public void AddProduct()
             {
                 Console.WriteLine("Enter product name: ");
-                string Product_name = Console.ReadLine();
+                string name = Console.ReadLine();
                 Console.WriteLine("Enter product price: ");
-                decimal Price = Convert.ToDecimal(Console.ReadLine());
+                decimal price = Convert.ToDecimal(Console.ReadLine());
                 Console.WriteLine("Enter description: ");
-                string Description = Console.ReadLine();
-                Product product = new Product(Product_name,Description,Price);
+                string description = Console.ReadLine();
+                Product product = new Product{Product_name = name,Description = description,Price = price};
 
                 productController.Insert(product);
+            }
+            public void UpdateProduct(){
+                Console.WriteLine("Enter product Id update: ");
+                int id = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter product name: ");
+                string name = Console.ReadLine();
+                Console.WriteLine("Enter product price: ");
+                decimal price = Convert.ToDecimal(Console.ReadLine());
+                Console.WriteLine("Enter description: ");
+                string description = Console.ReadLine();
+                Product product = new Product{Product_id = id,Product_name = name,Description = description,Price = price};
+
+                productController.Update(product);
             }
             public void AddCustomer(){
                 
@@ -59,7 +94,7 @@ namespace newproject.view
                 string Email = Console.ReadLine();
                 Console.WriteLine("Enter phone: ");
                 int Phone = Convert.ToInt32(Console.ReadLine());
-                Customer customer = new Customer(Fname,Lname,Email,Phone);
+                Customer customer = new Customer{First_name=Fname,Last_name=Lname,Email=Email,Phone = Phone};
 
                 customerController.Insert(customer);
             }

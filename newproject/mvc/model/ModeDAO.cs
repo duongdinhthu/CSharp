@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using newproject.entity;
+using newproject.mvc.entity;
 
-namespace newproject.model
+namespace newproject.mvc.model
 {    
     interface ModelDAO<T> where T : Entity<T>
     {

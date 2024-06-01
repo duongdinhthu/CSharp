@@ -1,7 +1,7 @@
 using System;
 using MySql.Data.MySqlClient;
 
-namespace newproject.connection
+namespace newproject.mvc.connection
 {
     public class Connection
 {

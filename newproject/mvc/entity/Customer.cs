@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace newproject.entity
+namespace newproject.mvc.entity
 {
     public class Customer : Entity<Customer> {
         public int Customer_id { get; set; } 
@@ -12,25 +12,7 @@ namespace newproject.entity
         public string Email { get; set; }
         public int Phone { get; set; }
         
-        public Customer() { }
 
-        public Customer(string first_name, string last_name, string email, int phone)
-        {
-            First_name = first_name;
-            Last_name = last_name;
-            Email = email;
-            Phone = phone;
-        }
-
-        public Customer(int customer_id, string first_name, string last_name, string email, int phone)
-        
-        {
-            Customer_id = customer_id;
-            First_name = first_name;
-            Last_name = last_name;
-            Email = email;
-            Phone = phone;
-        }
 
         public override string ToString()
         {

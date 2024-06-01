@@ -1,8 +1,8 @@
 using System;
 using MySql.Data.MySqlClient;
-using newproject.entity;
-using newproject.model;
-namespace newproject.controller
+using newproject.mvc.entity;
+using newproject.mvc.model;
+namespace newproject.mvc.controller
 {
     class Controller<T> where T : Entity<T>
     {
