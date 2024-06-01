@@ -16,8 +16,8 @@ namespace newproject{
         // atom1.Sesion();
         // View view = new View();
         // view.Start();
-        // View view = new View();
-        // view.Test();
+        View view = new View();
+        view.Test();
         }
     }
 }
