@@ -46,7 +46,6 @@ public class Atom
         AtomicWeight = atomicWeight;
         return true;
     }
-
     public void Display()
     {
         Console.WriteLine($"{AtomicNumber} {Symbol} {FullName} {AtomicWeight}");
