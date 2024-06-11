@@ -5,13 +5,14 @@ using System.Threading.Tasks;
 
 namespace newproject.mvc.entity
 {
-    public class Customer : Entity<Customer> {
-        public int Customer_id { get; set; } 
-        public string First_name { get; set; } 
-        public string Last_name { get; set; } 
+    public class Customer : Entity<Customer>
+    {
+        public int Customer_id { get; set; }
+        public string First_name { get; set; }
+        public string Last_name { get; set; }
         public string Email { get; set; }
         public int Phone { get; set; }
-        
+
 
 
         public override string ToString()
