@@ -17,7 +17,7 @@ namespace newproject{
         // View view = new View();
         // view.Start();
         View view = new View();
-        view.Test();
+        view.UpdateCustomer();
         }
     }
 }

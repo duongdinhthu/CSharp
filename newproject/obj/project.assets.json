@@ -4913,7 +4913,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hi\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -4921,11 +4921,11 @@
       "projectUniqueName": "D:\\CSharp\\newproject\\newproject.csproj",
       "projectName": "newproject",
       "projectPath": "D:\\CSharp\\newproject\\newproject.csproj",
-      "packagesPath": "C:\\Users\\Hi\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
       "outputPath": "D:\\CSharp\\newproject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Hi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"

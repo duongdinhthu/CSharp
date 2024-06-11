@@ -10,11 +10,11 @@
         "projectUniqueName": "D:\\CSharp\\Lap3\\Lap3.csproj",
         "projectName": "Lap3",
         "projectPath": "D:\\CSharp\\Lap3\\Lap3.csproj",
-        "packagesPath": "C:\\Users\\Hi\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
         "outputPath": "D:\\CSharp\\Lap3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Hi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

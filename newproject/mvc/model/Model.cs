@@ -1,3 +1,4 @@
+using System.Reflection.Metadata;
 using System;
 using MySql.Data.MySqlClient;
 using System.Reflection;
@@ -18,7 +19,46 @@ namespace newproject.mvc.model
         }
 
         private static string GetTableName(Type entityClass) => entityClass.Name;
+        private static string QueryUpdate(T entity)
+        {
+            Type entityClass = typeof(T);
+            string tableName = GetTableName(entityClass);
+            StringBuilder query = new StringBuilder($"update {tableName} set ");
+            PropertyInfo[] propertyInfos = entityClass.GetProperties();
+            List<string> columns = new List<string>();
+            List<string> parameters = new List<string>();
+            string idColumn = ""; // Lưu tên cột ID
+            
+            foreach (var propertyInfo in propertyInfos)
+            {
+                object value = propertyInfo.GetValue(entity);
+                
+                if (value != null)
+                {
+                    if (propertyInfo.Name != "Id" && propertyInfo.Name != "Customer_id") // Bỏ qua Customer_id
+                    {
+                        columns.Add(propertyInfo.Name);
+                        parameters.Add($"@{propertyInfo.Name}");
+                    }
+                    else
+                    {
+                        idColumn = propertyInfo.Name == "Id" ? "Id" : propertyInfo.Name;
+                    }
+                }
+            }
+            
+            string setValues = string.Join(", ", columns.Select(c => $"{c} = @{c}"));
+            
+            query.Append(setValues);
+            query.Append(" ");
+            
+            if (!string.IsNullOrEmpty(idColumn))
+            {
+                query.Append($"where {idColumn} = @Id");
+            }
 
+            return query.ToString();
+        }
        private static string QueryInsert(Entity<T> entity)
         {
             Type entityClass = entity.GetType();
@@ -94,12 +134,45 @@ namespace newproject.mvc.model
                 Insert(entity);
             }
         }
-
+        
         public bool Update(T entity)
+{
+    int rowsAffected = 0;
+    
+    using (MySqlConnection db = new MySqlConnection(connectionString))
+    {
+        db.Open();
+        
+        PropertyInfo[] propertyInfos = typeof(T).GetProperties();
+        
+        string query = QueryUpdate(entity); // Thêm cột Id vào hàm QueryUpdate
+        Console.WriteLine(query);
+        
+        using (MySqlCommand cmd = new MySqlCommand(query, db))
         {
+            foreach (var propertyInfo in propertyInfos)
+            {
+                object value = propertyInfo.GetValue(entity);
+                if (value != null)
+                {
+                    cmd.Parameters.AddWithValue("@" + propertyInfo.Name, value);
+                }
+            }
+            
+            // Lấy giá trị của Id
+            PropertyInfo idProperty = typeof(T).GetProperty("Customer_id");
+            object idValue = idProperty.GetValue(entity);
+            cmd.Parameters.AddWithValue("@Id", idValue);
 
-            return true; // Placeholder return value
+            rowsAffected = cmd.ExecuteNonQuery();
+            Console.WriteLine("Update Success!");
         }
+        
+        db.Close();
+    }
+    
+    return rowsAffected > 0;
+}
 
         public bool Delete(T entity)
         {
