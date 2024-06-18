@@ -1,0 +1,14 @@
+D:\BaithiC#\BaiThi\bin\Debug\net8.0\BaiThi.exe
+D:\BaithiC#\BaiThi\bin\Debug\net8.0\BaiThi.deps.json
+D:\BaithiC#\BaiThi\bin\Debug\net8.0\BaiThi.runtimeconfig.json
+D:\BaithiC#\BaiThi\bin\Debug\net8.0\BaiThi.dll
+D:\BaithiC#\BaiThi\bin\Debug\net8.0\BaiThi.pdb
+D:\BaithiC#\BaiThi\obj\Debug\net8.0\BaiThi.GeneratedMSBuildEditorConfig.editorconfig
+D:\BaithiC#\BaiThi\obj\Debug\net8.0\BaiThi.AssemblyInfoInputs.cache
+D:\BaithiC#\BaiThi\obj\Debug\net8.0\BaiThi.AssemblyInfo.cs
+D:\BaithiC#\BaiThi\obj\Debug\net8.0\BaiThi.csproj.CoreCompileInputs.cache
+D:\BaithiC#\BaiThi\obj\Debug\net8.0\BaiThi.dll
+D:\BaithiC#\BaiThi\obj\Debug\net8.0\refint\BaiThi.dll
+D:\BaithiC#\BaiThi\obj\Debug\net8.0\BaiThi.pdb
+D:\BaithiC#\BaiThi\obj\Debug\net8.0\BaiThi.genruntimeconfig.cache
+D:\BaithiC#\BaiThi\obj\Debug\net8.0\ref\BaiThi.dll
